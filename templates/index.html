@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Image Editor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>AI Image Editor</h1>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Upload Section -->
+    <section class="upload-section">
+      <input type="file" id="imageUpload" accept="image/*">
+      <textarea id="promptInput" placeholder="Enter your prompt, e.g., 'remove background'"></textarea>
+      <button id="processButton">Process Image</button>
+    </section>
+
+    <!-- Preview Section -->
+    <section class="preview-section">
+      <h2>Preview</h2>
+      <img id="previewImage" src="" alt="Uploaded Image Preview">
+      <div id="loading" class="loading-spinner"></div>
+    </section>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>Powered by OpenCV, GPT, and DALL-E</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
